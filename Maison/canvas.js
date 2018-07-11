@@ -1,4 +1,4 @@
-// Le drapeau de la Grande Bretagne
+// maison
 
 //fond blue
 var c = document.getElementById('mon_canvas_01');
