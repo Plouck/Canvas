@@ -4,86 +4,99 @@
 var c = document.getElementById('mon_canvas_01');
 var ctx = c.getContext("2d");
 
-//Fond blue
-ctx.fillStyle = "#012169";
-ctx.fillRect (0,0,600,300);
-
-//croix blanche derriere
+//Fumée noir
 ctx.beginPath();
-ctx.fillStyle = "white";
-ctx.lineTo(60,0);
-ctx.lineTo(600,270);
-ctx.lineTo(600,300);
-ctx.lineTo(540,300);
-ctx.lineTo(0,30);
-ctx.lineTo(0,0);
+ctx.fillStyle="black";
+ctx.arc(230, 40, 40, 0, 2 * Math.PI);
 ctx.fill();
 ctx.closePath();
 
 ctx.beginPath();
-ctx.fillStyle = "white";
-ctx.moveTo(540,0);
-ctx.lineTo(600,0);
-ctx.lineTo(600,30);
-ctx.lineTo(60,300);
-ctx.lineTo(0,300);
-ctx.lineTo(0,270);
-ctx.lineTo(540,0);
-ctx.fill();
-ctx.closePath();
-
-//croix rouge derriere
-ctx.beginPath();
-ctx.fillStyle = "#C8102E";
-ctx.lineTo(300,150);
-ctx.lineTo(260,150);
-ctx.lineTo(0,20);
-ctx.lineTo(0,0);
+ctx.fillStyle="black";
+ctx.arc(270 , 60, 30, 0, 2 * Math.PI);
 ctx.fill();
 ctx.closePath();
 
 ctx.beginPath();
-ctx.fillStyle = "#C8102E";
-ctx.moveTo(300,150);
-ctx.moveTo(340,150);
-ctx.lineTo(600,280);
-ctx.lineTo(600,300);
-ctx.lineTo(300,150);
+ctx.fillStyle="black";
+ctx.arc(300,90,20, 0, 2 * Math.PI);
+ctx.fill();
+ctx.closePath();
+
+//Cheminé du bateau
+
+ctx.beginPath();
+ctx.fillStyle="black";
+ctx.moveTo(280,120);
+ctx.lineTo(320,120);
+ctx.lineTo(330,180);
+ctx.lineTo(270,180);
+ctx.lineTo(280,120);
 ctx.fill();
 ctx.closePath();
 
 ctx.beginPath();
-ctx.fillStyle = "#C8102E";
-ctx.moveTo(300,150);
-ctx.lineTo(600,0);
-ctx.lineTo(560,0);
-ctx.lineTo(300,130);
-ctx.lineTo(300,150);
+ctx.strokeStyle = "black";
+ctx.lineWidth=10;
+ctx.lineCap="round";
+ctx.moveTo(200,180);
+ctx.lineTo(400,180);
+ctx.stroke();
+ctx.closePath();
+
+ctx.beginPath();
+ctx.strokeStyle = "black";
+ctx.lineWidth=10;
+ctx.lineCap="square";
+ctx.moveTo(200,185);
+ctx.lineTo(400,185);
+ctx.stroke();
+ctx.closePath();
+
+//Haut du bateau
+
+ctx.beginPath();
+ctx.strokeStyle = "black";
+ctx.lineWidth=10;
+ctx.lineCap="round";
+ctx.moveTo(150,200);
+ctx.lineTo(450,200);
+ctx.stroke();
+ctx.closePath();
+
+ctx.fillStyle = "black";
+ctx.fillRect (145,200,310,100);
+
+//separation du haut et bas du bateau
+
+ctx.beginPath();
+ctx.strokeStyle = "white";
+ctx.lineWidth=10;
+ctx.lineJoin="miter";
+ctx.lineCap="square";
+ctx.moveTo(150,300);
+ctx.lineTo(300,250);
+ctx.lineTo(450,300);
+ctx.stroke();
+ctx.closePath();
+
+// bas du bateau
+
+ctx.beginPath();
+ctx.fillStyle="black";
+ctx.moveTo(100,320);
+ctx.lineTo(300,250);
+ctx.lineTo(500,320);
+ctx.lineTo(100,320);
 ctx.fill();
 ctx.closePath();
 
 ctx.beginPath();
-ctx.fillStyle = "#C8102E";
-ctx.moveTo(300,150);
-ctx.lineTo(0,300);
-ctx.lineTo(40,300);
-ctx.lineTo(300,170);
-ctx.lineTo(300,150);
+ctx.fillStyle="black";
+ctx.moveTo(100,320);
+ctx.lineTo(120,580);
+ctx.bezierCurveTo(240,500,200,570,480,580);
+ctx.lineTo(500,320);
+ctx.lineTo(100,320);
 ctx.fill();
 ctx.closePath();
-
-//Grosse croix blanche
-
-ctx.fillStyle = "white";
-ctx.fillRect (0,100,600,100);
-
-ctx.fillStyle = "white";
-ctx.fillRect (250,0,100,300);
-
-//Grosse croix rouge
-
-ctx.fillStyle = "#C8102E";
-ctx.fillRect (0,120,600,60);
-
-ctx.fillStyle = "#C8102E";
-ctx.fillRect (270,0,60,300);
