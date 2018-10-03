@@ -1,2 +1,2 @@
 # Canvas
-Apprentissage du Canvas en la formation chez BeCode
+Apprentissage du Canvas lors formation chez BeCode
